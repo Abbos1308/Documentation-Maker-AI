@@ -1,11 +1,7 @@
 import requests
 import os
-from dotenv import load_dotenv
 
-load_dotenv()
-token = os.environ.get("TOKEN")
-
-def get_repo_info(owner, repo):
+def get_repo_info(owner, repo,token):
     h = {"Authorization": f"Bearer {token}", "Accept": "application/vnd.github+json"}
     base = f"https://api.github.com/repos/{owner}/{repo}"
 

@@ -7,10 +7,10 @@ import json
 
 
 
-def generate(link:str):
+def generate(link:str,token):
     try:
         owner , repo = parse_github_repo(link)
-        info = json.dumps(get_repo_info(owner,repo))
+        info = json.dumps(get_repo_info(owner,repo,token))
     except:
         return "ERROR: Failed to fetch repository. Could be deleted or private. Please check and retry"
     try:
