@@ -40,7 +40,7 @@
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/codereviewer.git
+git clone https://github.com/Abbos1308/Documentation-Maker-AI.git
 cd codereviewer
 
 # 2. Create and activate a virtual environment
@@ -62,7 +62,7 @@ export TOKEN=your_github_token
 ## ⚡ Quickstart
 
 ```bash
-python main.py https://github.com/Abbos1308/Aiogram3Template.git
+python main.py https://github.com/owner/repo.git
 ```
 
 Or use it programmatically:
