@@ -25,5 +25,5 @@ def doc_maker(link:str):
 
 
 
-print(doc_maker("https://github.com/Abbos1308/Aiogram3Template.git"))
+print(doc_maker("https://github.com/Abbos1308/Documentation-Maker-AI.git"))
 
