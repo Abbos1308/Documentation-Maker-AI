@@ -1,0 +1,7 @@
+[project]
+name = "codereviewer"
+version = "0.1.0"
+description = "It is python library that helps you to make documentation for your repository"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
