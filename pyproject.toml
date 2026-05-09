@@ -1,23 +1,17 @@
-name: Publish to PyPI
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
-on:
-  push:
-    tags:
-      - "v*"
+[project]
+name = "docmakerai"
+version = "0.1.2"
+description = "Generate documentation for your repository"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
 
-jobs:
-  publish:
-    runs-on: ubuntu-latest
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-      - run: pip install build twine
-      - run: python -m build
-      - run: twine upload dist/*
-        env:
-          TWINE_USERNAME: __token__
-          TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
+[tool.hatchling.packages]
+find = {where = ["."]}
+[tool.hatch.build.targets.wheel]
+packages = ["docmakerai"]
