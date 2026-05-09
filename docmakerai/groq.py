@@ -1,15 +1,11 @@
 import os
 import requests
-from dotenv import load_dotenv
 import time
 
-load_dotenv()
-
-API_KEY = os.environ.get("GROQ_API_KEY")
 BASE_URL = "https://api.groq.com/openai/v1/chat/completions"
 MODEL = "llama-3.3-70b-versatile"
 
-def call_groq(messages, system_prompt=None, max_retries=5):
+def call_groq(messages,API_KEY, system_prompt=None, max_retries=5):
     headers = {
         "Authorization": f"Bearer {API_KEY}",
         "Content-Type": "application/json"
