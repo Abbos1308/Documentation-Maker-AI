@@ -117,7 +117,7 @@ Generates documentation for a given GitHub repository.
 ```python
 from doc_writer import doc_maker
 
-docs = doc_maker("https://github.com/Abbos1308/Aiogram3Template.git")
+docs = doc_maker("https://github.com/owner/repo.git")
 print(docs)
 ```
 
