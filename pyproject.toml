@@ -14,4 +14,4 @@ license-files = ["LICENSE"]
 [tool.hatchling.packages]
 find = {where = ["."]}
 [tool.hatch.build.targets.wheel]
-packages = ["CodeReviewer"]
+packages = ["docmakerai"]

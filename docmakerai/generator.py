@@ -1,13 +1,13 @@
-from gemini import call_gemini
-from git_pull import get_repo_info , code_extractor
-from regex import parse_github_repo, extract_file_paths, prompt_maker
-from scouter import scouter
-from doc_writer import doc_writer
+from .gemini import call_gemini
+from .git_pull import get_repo_info , code_extractor
+from .regex import parse_github_repo, extract_file_paths, prompt_maker
+from .scouter import scouter
+from .doc_writer import doc_writer
 import json
 
 
 
-def doc_maker(link:str):
+def generate(link:str):
     try:
         owner , repo = parse_github_repo(link)
         info = json.dumps(get_repo_info(owner,repo))
@@ -23,7 +23,4 @@ def doc_maker(link:str):
         return "ERROR: Failed to connect with AI. Pleade try again in few minutes"
     return doc
 
-
-
-print(doc_maker("https://github.com/Abbos1308/Documentation-Maker-AI.git"))
 

@@ -1,5 +1,5 @@
-from groq import call_groq
-from prompts import system_prompt_scouter as system_prompt
+from .groq import call_groq
+from .prompts import system_prompt_scouter as system_prompt
 def scouter(info, readme="None"):
     resp = call_groq([{"role": "user", "content": info}], system_prompt=system_prompt)
     return resp["choices"][0]["message"]["content"]
