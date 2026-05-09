@@ -70,7 +70,7 @@ Or use it programmatically:
 ```python
 from doc_writer import doc_maker
 
-print(doc_maker("https://github.com/Abbos1308/Aiogram3Template.git"))
+print(doc_maker("https://github.com/owner/repo.git"))
 ```
 
 ---
