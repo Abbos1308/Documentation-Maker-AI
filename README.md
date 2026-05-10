@@ -1,4 +1,4 @@
-# 📄 codereviewer
+# 📄 Codereviewer
 
 > AI-powered documentation generator for GitHub repositories — fetch, extract, and document any repo in seconds.
 
@@ -51,6 +51,7 @@ source myenv/bin/activate        # Linux/Mac
 # 3. Install the package
 pip install .
 
+
 # 4. Set environment variables
 export GEMINI_API_KEY=your_gemini_key
 export GROQ_API_KEY=your_groq_key
@@ -58,6 +59,11 @@ export TOKEN=your_github_token
 ```
 
 ---
+
+## Or you can install the package directly from PyPi:
+```bash
+pip install docmakerai
+```
 
 ## ⚡ Quickstart
 
@@ -68,9 +74,9 @@ python main.py https://github.com/owner/repo.git
 Or use it programmatically:
 
 ```python
-from doc_writer import doc_maker
+from docmakerai.generator import generate
 
-print(doc_maker("https://github.com/owner/repo.git"))
+print(generate("https://github.com/owner/repo.git","your_git_token_here","your_ai_api_key_here"))
 ```
 
 ---
@@ -100,7 +106,7 @@ codereviewer/
 
 ## 📖 API Reference
 
-### `doc_maker(link: str) -> str`
+### `generate(link: str,git_token,ai_token) -> str`
 
 Generates documentation for a given GitHub repository.
 
@@ -115,9 +121,9 @@ Generates documentation for a given GitHub repository.
 **Example:**
 
 ```python
-from doc_writer import doc_maker
+from docmakerai.generator import generate 
 
-docs = doc_maker("https://github.com/owner/repo.git")
+docs = generate("https://github.com/owner/repo.git","your_git_token_here","your_ai_api_key_here")
 print(docs)
 ```
 
